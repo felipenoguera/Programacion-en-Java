@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<title>universidad </title>
+
+<link rel="stylesheet" href="Prueba.css">
+<style>
+.mySlides {display:none}
+</style>
+
+<body>
+  <h2>Universidad de los Andes Colombia </h2>
+  <div class="funciones">
+    <div class="Info">
+      <img class="Equipo" src="https://thumbs.dreamstime.com/b/icono-o-logotipo-del-trabajador-de-construcci%C3%B3n-la-mujer-negra-130621494.jpg"  width="500px"
+    height="500px">
+      <h3>Jack D</h3>
+      <p>Director De Equipo de creacion de interfaz</p>
+      <button class="boton1">Mas Detalles</button>
+    </div>
+     
+    <div class="equipo1">
+      
+    <img class="Equipo1" src="https://cienciassociales.uniandes.edu.co/wp-content/uploads/elementor/thumbs/sin-asombro-y-sin-ira-p5gojfhtvtbtfzwsirbxaunfdo4c4b5w60addp35bc.jpg"  width="500px"
+    height="500px">
+    <h4>Andres</h4>
+    <p>Sistema de analicis de de interfaz</p>
+    <button class="boton1">Mas Detalles</button>
+
+    </div>
+  </div>
+
+    <img class="Equipo" src="https://i0.wp.com/podprogramar.com.br/wp-content/uploads/2019/06/sql_.png?resize=776%2C310&ssl=1"  width="500px"
+    height="500px">
+    <img class="Equipo" src="https://cienciassociales.uniandes.edu.co/wp-content/uploads/elementor/thumbs/sin-asombro-y-sin-ira-p5gojfhtvtbtfzwsirbxaunfdo4c4b5w60addp35bc.jpg"  width="500px"
+    height="500px">
+ 
+    
+    
+    <button class="display-left" onclick="ActionIzq_ActionDer(-1)">&#10094;</button>
+    <button class="display-right" onclick="ActionIzq_ActionDer(1)">&#10095;</button>
+    
+  </div>
+   <script>
+    var slideIndex = 1;
+    showDiv(slideIndex);
+    
+    function ActionIzq_ActionDer(n) {
+      showDiv(slideIndex += n);
+    }
+    
+    function showDiv(n) {
+      var i;
+      var x = document.getElementsByClassName("Equipo");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+ 
+</body> 
+
+</html>
